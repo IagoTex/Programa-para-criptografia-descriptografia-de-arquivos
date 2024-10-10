@@ -1,0 +1,1 @@
+Programa de criptografar arquivos que ainda está em desenvolvimento, no final do projeto será prossível criptografar arquivos com criptografia simétrica, assimétrica ou HASH, além de ter a possibilidade de copiar ou mudar as chaves assim que o usuário quiser
