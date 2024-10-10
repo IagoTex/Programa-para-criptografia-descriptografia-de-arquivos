@@ -1,12 +1,15 @@
 from cryptography.fernet import Fernet
 import abrirArquivo
+import os
 
 
 def criptografar():
  caminho_arquivo = abrirArquivo.abrir_navegador_arquivos()
 
  if caminho_arquivo:
-  with open('chave.key', 'rb') as filekey:
+  
+  caminho_chaveSimetrica = os.path.join('keys', 'chaveSimetrica.key')
+  with open(caminho_chaveSimetrica, 'rb') as filekey:
      chave = filekey.read()
 
   fernet = Fernet(chave)

@@ -1,6 +1,13 @@
 from cryptography.fernet import Fernet
+import os
 
-chave = Fernet.generate_key()
+def criacaoChaveSimetrica():
+ chave = Fernet.generate_key()
 
-with open('chave.key', 'wb') as filekey:
-    filekey.write(chave)
+ pasta = "keys"
+ os.makedirs(pasta, exist_ok=True)
+
+ caminho_chave = os.path.join(pasta, 'chaveSimetrica.key')
+
+ with open(caminho_chave, 'wb') as filekey:
+     filekey.write(chave)
